@@ -15,8 +15,9 @@ let newBookSubmitButton = document.getElementById("new-book-submit");
 function addBookToLibrary (name, author, pages, read) {
     let newBook = new Book(name, author, pages, read);
     myLibrary.push(newBook);
-    let latestBookAdded = document.querySelector("#books-container .book:nth-child(2)");
-    console.log(latestBookAdded);
+    let latestBookAdded = document.querySelector("#books-container .book:nth-child(3)");
+    newBookBoard.setAttribute("style", "display:none;");
+    // console.log(latestBookAdded);
     latestBookAdded.insertAdjacentHTML("beforebegin",
     `
         <div class = "book">
