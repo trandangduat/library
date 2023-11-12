@@ -1,0 +1,126 @@
+@import url('reset.css');
+
+:root {
+    --primary-1:hsl(195, 61%, 17%);
+    --primary-2:hsl(195, 62%, 15%);
+    --primary-3:hsl(194, 60%, 14%);
+    --primary-4:hsl(195, 61%, 12%);
+    --primary-5:hsl(195, 62%, 10%);
+    --support-1: #fff2d8;
+    --support-2: #e6dac2;
+    --support-3: #ccc2ad;
+    --support-4: #b3a997;
+    --support-5: #999182;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: var(--support-1);
+}
+
+h1 {
+    font-size: 8rem;
+    color: var(--primary-1);
+    margin: 0;
+    font-weight: 500;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove Arrows/Spinners*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#new-book-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+}
+
+
+.btn {
+    padding: 10px 50px;
+    border: 2px solid var(--primary-1);
+    font-size: 2rem;
+    display: inline-block;
+}
+
+#books-container {
+    display: grid;
+    gap: 20px;
+    margin: 60px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 300px;
+}
+
+#new-book-button {
+    color: var(--primary-4);
+    padding: 0 40px;
+    display: flex;
+    border: 1px dashed var(--primary-1);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#new-book-button:hover {
+    transform: scale(98%);
+    background: linear-gradient(45deg, var(--primary-1), var(--primary-2));
+    color: var(--support-1);
+}
+
+#books-container .book {
+    color: var(--primary-4);
+    overflow: hidden;
+    padding: 0 40px;
+    background: linear-gradient(180deg, var(--support-1), var(--support-2));
+    /* border-right: 20px solid var(--support-2); */
+    /* box-shadow: 5px 10px var(--support-2); */
+    transition: 200ms;
+    display: flex;
+    flex-direction: column;
+}
+
+#books-container .book:hover {
+    transform: translateY(-10px);
+}
+
+#books-container .book > .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#books-container .book > .author {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin: auto;
+    margin-top: 5px;
+    font-family: 'roboto', sans-serif;
+}
