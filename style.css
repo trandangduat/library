@@ -117,7 +117,19 @@ input[type=number] {
     color: var(--support-1);
 }
 
+@keyframes spawn-in {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 #books-container .book {
+    animation: spawn-in 500ms;
     color: var(--primary-4);
     overflow: hidden;
     padding: 0 40px;
